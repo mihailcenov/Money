@@ -10,13 +10,14 @@ namespace Money
             decimal bitcoins = int.Parse(Console.ReadLine());
             Console.WriteLine("въвеждане на юани");
             decimal uans = decimal.Parse(Console.ReadLine());
-            Console.WriteLine("Комисионна от 0-5%");
-            decimal commission = decimal.Parse(Console.ReadLine()) / 100.00m;
 
-            if (commission > (5.0m / 100.00m))
+            decimal commission;
+            do
             {
-                Console.WriteLine("Невалидна комисионна");
-            }
+                Console.WriteLine("Комисионна от 0-5%");
+                commission = decimal.Parse(Console.ReadLine()) / 100.00m;
+                //Console.WriteLine("Невалидна комисионна");
+            } while (commission > (5.0m / 100.00m));
 
             decimal bitcoinstoleva = 1168;
             decimal uanstodollars = 0.15m;
