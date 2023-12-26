@@ -6,8 +6,11 @@ namespace Money
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Въвеждане на биткойни");
             decimal bitcoins = int.Parse(Console.ReadLine());
+            Console.WriteLine("въвеждане на юани");
             decimal uans = decimal.Parse(Console.ReadLine());
+            Console.WriteLine("Комисионна от 0-5%");
             decimal commission = decimal.Parse(Console.ReadLine()) / 100.00m;
 
             decimal bitcoinstoleva = 1168;
